@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple-Step Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="eventForm">
+            <h1>Event Registration</h1>
+            <div class="form-step active">
+            <h2>Step 1: Personal Information</h2>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="email" >Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <button type="button" class="next-btn">Next</button>
+            </div>
+     <div class="form-step">
+        <h2>Step 2: Event Details</h2>
+        <label for="event">Select Event</label>
+        <select name="event" id="event" required>
+            <option value=""disabled selected>Choose an event</option>
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+            <option value="conference">Conference</option>
+        </select>
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="0" placeholder="Enter number of guests" required>
+        <div class="button-group">
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+     </div>
+     <div class="form-step">
+        <h2>Step 3: Confirmation</h2>
+        <p>Please review your details and confirm registration.</p>
+        <div class="summary"></div>
+        <div class="button-group">
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="submit">Submit
+            </button>
+        </div>
+     </div>
+        </form>
+    </div>
+    
+</body>
+</html>
